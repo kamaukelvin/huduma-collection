@@ -83,7 +83,7 @@ const PickupDetails = () => {
 
       <button
         type="submit"
-        className="w-100  btn btn-danger "
+        className="w-100  btn btn-danger"
       >
         Save
       </button>

@@ -10,8 +10,8 @@ const Main = () => {
       <div className="container">
         <div className="row">
           <div className="col-md-8 main-div">
-            <div>
-              <img src={huduma} alt="" className="main-img" />
+            <div className="header-image">
+            <img src={huduma} alt="" className="main-img" />
             </div>
             <h2 className="main-title">
               Get your Huduma Card registration status and delivery address

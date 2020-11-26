@@ -24,7 +24,7 @@ const VerifyPhone = () => {
         onClick={() => next()}
         class="w-100  btn btn-danger "
       >
-        Verify
+        Next
       </button>
     </form>
   );

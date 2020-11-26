@@ -58,7 +58,7 @@ const CaptureDetails = ({ startDate, setStartDate }) => {
           onClick={() => next()}
           className="w-100 btn btn-danger"
         >
-          Verify
+          Next
         </button>
       </div>
     </form>

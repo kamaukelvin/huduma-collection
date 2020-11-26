@@ -3,6 +3,7 @@ import VerifyPhone from './VerifyPhone'
 
 
 const VerifyPhoneWrapper = () => {
+    // Perform all logics here
     return (
         <div>
            <VerifyPhone/> 

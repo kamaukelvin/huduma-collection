@@ -1,13 +1,11 @@
 import React, { useContext } from "react";
-import { useHistory } from "react-router-dom";
 import { Context } from "context/Context";
 
 const Otp = () => {
   const { next } = useContext(Context);
 
-  const history = useHistory();
   return (
-    <form id="form">
+    <form id="form" >
       <div className="card-body">
         <h6 className="py-3">Verify you phone number</h6>
 
