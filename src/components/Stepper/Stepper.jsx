@@ -15,6 +15,7 @@ import VerifyPhone from "./verifyPhone/VerifyPhoneWrapper";
 import Otp from "./otp/OtpWrapper";
 import CaptureDetails from "./captureDetails/CaptureDetailsWrapper";
 import Pickup from "./pickUp/PickupDetailsWrapper";
+import Search from 'components/search/SearchWrapper'
 
 const steps = [
   {
@@ -50,26 +51,30 @@ const Stepper = () => {
   };
 
   return (
-      <div className="content">
-    <div className="container">
-      <Header />
-      <div className="card col-md-8 offset-md-2 p-xs-0 p-sm-4">
-        <div className="card-body">
-        {current > 0 && <Link className="float-right text-success pb-3" onClick={()=>prev()}><DoubleLeftOutlined /> <span className="pt-2">Back</span></Link>}
-          <Steps current={current} onChange={onChange}>
-            {steps.map((item) => (
+    <div>
+      <Search/>
+
+    </div>
+    //   <div className="content">
+    // <div className="container">
+    //   <Header />
+    //   <div className="card col-md-8 offset-md-2 p-xs-0 p-sm-4">
+    //     <div className="card-body">
+    //     {current > 0 && <Link className="float-right text-success pb-3" onClick={()=>prev()}><DoubleLeftOutlined /> <span className="pt-2">Back</span></Link>}
+    //       <Steps current={current} onChange={onChange}>
+    //         {steps.map((item) => (
              
-              <Step key={item.title} title={item.title} icon={item.icon} />
+    //           <Step key={item.title} title={item.title} icon={item.icon} />
               
-            ))}
-          </Steps>
-          <div className="steps-content">{steps[current].content}</div>
-        </div>
-      </div>
-      <Footer/>
-    </div>
+    //         ))}
+    //       </Steps>
+    //       <div className="steps-content">{steps[current].content}</div>
+    //     </div>
+    //   </div>
+    //   <Footer/>
+    //= </div>
   
-    </div>
+    // </div>
   );
 };
 

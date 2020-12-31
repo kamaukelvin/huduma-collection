@@ -2,6 +2,7 @@
 :root {
   --green: #006600 ;
   --red: #bb0000;
+  --blue: #0F9991;
 }
 *{
   margin:0;
@@ -22,6 +23,9 @@ html,body{
 }
 .text-danger{
  color: var(--red) !important
+}
+.text-blue{
+ color: var(--blue) !important
 }
 /* #form{
   margin-top: 3rem
@@ -60,7 +64,7 @@ html,body{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 4rem 0;
+  padding: 1rem 0 3rem 0;
   flex-wrap: wrap;
 
 }
@@ -92,6 +96,7 @@ html,body{
   padding-bottom: 1em;
 }
 
+/* OVERRIDES */
 
 .form-control:focus {
     color: #495057;
@@ -109,6 +114,21 @@ color: var(--green) !important
 }
 .ant-steps .ant-steps-item:not(.ant-steps-item-active) > .ant-steps-item-container[role='button']:hover .ant-steps-item-title, .ant-steps .ant-steps-item:not(.ant-steps-item-active) > .ant-steps-item-container[role='button']:hover .ant-steps-item-subtitle, .ant-steps .ant-steps-item:not(.ant-steps-item-active) > .ant-steps-item-container[role='button']:hover .ant-steps-item-description , .ant-steps .ant-steps-item:not(.ant-steps-item-active):not(.ant-steps-item-process) > .ant-steps-item-container[role='button']:hover .ant-steps-item-icon .ant-steps-icon {
   color: var(--red) !important;
+}
+.ant-input-search > .ant-input-group > .ant-input-group-addon .ant-input-search-button {
+  border-radius: 0 2px 2px 0;
+  background-color:var(--green) !important;
+  border-color: var(--green) !important;
+}
+.ant-input-search .ant-input:hover, .ant-input-search .ant-input:focus {
+  border-color: var(--green) !important;
+  box-shadow: none !important;
+}
+.ant-btn-primary {
+  color: #fff;
+  background: var(--green) !important;
+  border-color: var(--green) !important;
+  box-shadow: none !important;
 }
 .footer{
   position: absolute;
