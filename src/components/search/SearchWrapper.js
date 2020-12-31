@@ -10,18 +10,18 @@ const SearchWrapper = () => {
   const columns = [
     {
       title: "Bio Data",
-      dataIndex: "name",
+      dataIndex: "full_name",
     },
     {
       title: "",
-      dataIndex: "description",
+      dataIndex: "gender",
     },
     {
       title: "",
 
       render: (text, record) => (
           <div>
-{text.name==="Current delivery address" && <button
+{text.has_address  && <button
             onClick={() => setModalVisible(true)}
             className="w-100 btn btn-sm btn-danger"
           >
@@ -38,34 +38,44 @@ const SearchWrapper = () => {
   ];
 
   //   data from api
-  const data = [
-    {
-      key: "1",
-      name: "Full Name",
-      description: "John Smith",
-    },
 
-    {
-      key: "2",
-      name: "National Id Number",
-      description: "123456789",
-    },
-    {
-      key: "3",
-      name: "Telephone Number",
-      description: "0720 333 444",
-    },
-    {
-      key: "4",
-      name: "Gender",
-      description: "Male",
-    },
-    {
-      key: "5",
-      name: "Current delivery address",
-      description: "MWS-MSA Kisauni",
-    },
-  ];
+  let mydata =[]
+  let response  =
+  {registration_no: "484b06c9-1554896906730", 
+  full_name: "CHARLES NCHOLE MICHIRA", 
+  gender: "M",
+  has_address: true}
+  mydata.push(response)
+  console.log("MY DATA ", mydata)
+
+//   const data = [
+//     {
+//       key: "1",
+//       name: "Full Name",
+//       description: "John Smith",
+//     },
+
+//     {
+//       key: "2",
+//       name: "National Id Number",
+//       description: "123456789",
+//     },
+//     {
+//       key: "3",
+//       name: "Telephone Number",
+//       description: "0720 333 444",
+//     },
+//     {
+//       key: "4",
+//       name: "Gender",
+//       description: "Male",
+//     },
+//     {
+//       key: "5",
+//       name: "Current delivery address",
+//       description: "MWS-MSA Kisauni",
+//     },
+//   ];
 
   //   Search function here
   const onSearch = (value) => setKeyword(value);
@@ -133,7 +143,7 @@ const SearchWrapper = () => {
         </Modal>
       <Search
         columns={columns}
-        data={data}
+        data={mydata}
         onSearch={onSearch}
         keyword={keyword}
       />

@@ -1,12 +1,14 @@
-import React from "react";
+import React, {useState} from "react";
 import Header from "components/header/Header";
 import Footer from "components/footer/Footer";
 import { Input, Table, Select } from "antd";
 import Seo from "assets/images/seo.png";
+import { FaSistrix } from 'react-icons/fa'
 
 const Search = ({ columns, data, onSearch, keyword }) => {
   const { Search } = Input;
   const { Option } = Select;
+
 
 
   return (
@@ -19,13 +21,22 @@ const Search = ({ columns, data, onSearch, keyword }) => {
               National Id/ Document Serial Number
             </h5>
  
-            
-            <Search
+          
+
+      <Input.Group compact>
+      <Select size="large" defaultValue="id_number">
+        <Option value="id_number">National Id</Option>
+        <Option value="serial">Serial No.</Option>
+      </Select>
+      <Search
               placeholder="input search keyword"
               enterButton
               size="large"
               onSearch={onSearch}
+              style={{width:"80%"}}
  />
+    </Input.Group>
+      
             {keyword === null ? (
               <div>
                 <div className="d-flex flex-wrap justify-content-center mt-5">
